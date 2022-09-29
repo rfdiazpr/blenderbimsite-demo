@@ -1,0 +1,91 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./style.css">  -->
+    <link rel="stylesheet" href="./static/main.css">
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>BlenderBIM</title>
+</head>
+
+<!-- <body> -->
+<body class="w-[100vw] h-screen bg-gray-200 ">
+    <nav>
+
+        <div class="logo">
+            <img src="./static/Logos/BlenderBimLogo.png" alt="BlenderBimLogo logo">
+        </div>   
+
+        <div class="menu">        
+            <a target="_blank" href=""> </a>
+            <a  class="_blank"  href="/">home</a>
+            <a target="_blank" href=""> </a>
+            <a target="_blank" href="/download/download.html">download</a>
+            <a target="_blank" href=""> </a>
+            <a target="_blank" href="https://community.osarch.org/discussions/tagged/blenderbim-add-on">community</a>
+            <a target="_blank" href=""> </a>
+            <a target="_blank" href="https://blenderbim.org/docs/">documentation</a>
+        </div>
+
+        <div class="funding"><a href='https://opencollective.com/opensourcebim' target='_blank'>Support the development on Open Collective</a><div class="progress-bar"><div>estimated monthly</div></div></div>
+                <script>
+                    fetch('https://opencollective.com/opensourcebim.json').then(r => r.json()).then(d => { 
+                        let monthly = d.yearlyIncome / 12 / 100.;
+                        let div = document.querySelector('.progress-bar div')
+                        div.style.width = (monthly / 5) + '%'; 
+                        div.innerText = `$ ${monthly.toFixed(2)} / month`;
+                    });
+                </script>
+        </div>
+
+        <div class="menu">
+            <a target="_blank" href="https://twitter.com/BlenderBIM"> 
+                <img width="30" color=blue  src="./static/logos/twitter-logo.svg"  alt=""> </a>
+            <a target="_blank" href="https://github.com/IfcOpenShell/IfcOpenShell/tree/v0.7.0/src/blenderbim"> 
+                <img width="30"  src="./static/logos/GitHub-Mark-64px.png"  alt=""> </a>
+        </div>
+    </nav>
+
+    <div class="jumbo">
+        <div class="jumbo-text">
+            <h2>Download</h2>
+            <h3 color="green"><a class="IfcOpenShell">Alpha software good luck have fun</a></h3>
+        </div>
+    </div>
+
+  <section class="row">
+    <section class="four columns">
+        <p class="t-center">
+            <img src="./static/logos/linux-logo.svg" width="48" alt="Available for Linux" />
+            <br /><br />
+            <a href="https://blenderbim.org/builds/blenderbim-220516-py310-linux.zip"
+                class="button button-primary">Download for Linux</a>
+        </p>
+    </section>
+    <section class="four columns">
+        <p class="t-center">
+            <img src="./static/logos/macos-logo.svg" width="48" alt="Available for MacOS" />
+            <br /><br />
+            <a href="https://blenderbim.org/builds/blenderbim-220516-py310-macos.zip"
+                class="button button-primary">Download for MacOS</a>
+        </p>
+    </section>
+    <section class="four columns">
+        <p class="t-center">
+            <img src="./static/logos/windows-logo.svg" width="48" alt="Available for Windows" />
+            <br /><br />
+            <a href="https://blenderbim.org/builds/blenderbim-220516-py310-win.zip"
+                class="button button-primary">Download for Windows</a>
+        </p>
+    </section>
+</section>
+    
+    <footer>     
+        <HR>  
+        <p class="footer">Blender is Free Software made by the community of 
+            <a href="https://www.blender.org/" class="IfcOpenShell" color=green>Blender.org</a></p>
+        <p class="footer">The BlenderBIM Add-on is built with ♥ on the awesome  <a class="IfcOpenShell" href="http://www.ifcopenshell.org/">IfcOpenShell</a>
+        project by amazing volunteers. You can <a class="IfcOpenShell">be one too!</a> </p> 
+    </footer>
+</body>
+</html>

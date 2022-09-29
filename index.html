@@ -1,0 +1,208 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./style.css">  -->
+    <link rel="stylesheet" href="./static/main.css">
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>BlenderBIM</title>
+</head>
+
+<!-- <body> -->
+<body class="w-[100vw] h-screen bg-gray-200 ">
+    <nav>
+
+        <div class="logo">
+            <img src="./static/Logos/BlenderBimLogo.png" alt="BlenderBimLogo logo">
+        </div>   
+
+        <div class="menu">        
+            <a target="_blank" href=""> </a>
+            <a  class="_blank"  href="/">home</a>
+            <a target="_blank" href=""> </a>
+            <a target="_blank" href="./download/download.html">download</a>
+            <a target="_blank" href=""> </a>
+            <a target="_blank" href="https://community.osarch.org/discussions/tagged/blenderbim-add-on">community</a>
+            <a target="_blank" href=""> </a>
+            <a target="_blank" href="https://blenderbim.org/docs/">documentation</a>
+        </div>
+
+        <div class="funding"><a href='https://opencollective.com/opensourcebim' target='_blank'>Support the development on Open Collective</a><div class="progress-bar"><div>estimated monthly</div></div></div>
+                <script>
+                    fetch('https://opencollective.com/opensourcebim.json').then(r => r.json()).then(d => { 
+                        let monthly = d.yearlyIncome / 12 / 100.;
+                        let div = document.querySelector('.progress-bar div')
+                        div.style.width = (monthly / 5) + '%'; 
+                        div.innerText = `$ ${monthly.toFixed(2)} / month`;
+                    });
+                </script>
+        </div>
+
+        <div class="menu">
+            <a target="_blank" href="https://twitter.com/BlenderBIM"> 
+                <img width="30" color=blue  src="./static/logos/twitter-logo.svg"  alt=""> </a>
+            <a target="_blank" href="https://github.com/IfcOpenShell/IfcOpenShell/tree/v0.7.0/src/blenderbim"> 
+                <img width="30"  src="./static/logos/GitHub-Mark-64px.png"  alt=""> </a>
+        </div>
+    </nav>
+
+    <div class="jumbo">
+        <div class="jumbo-text">
+            <h2>BlenderBIM Add-On</h2>
+            <h3 color="green">An add-on for beautiful, detailed, and data-rich OpenBIM with Blender</h3>
+        </div>
+    </div>
+
+    
+    <!-- Need help how to add left half circle image -->
+    <!-- <div>
+        <img src="./static/other/LeftSlider.png" style="width:100%">    
+    </div>
+    -->
+
+    <!-- Slides images are stored in ./static/slider/ -->
+
+    <div class="slideshow-container">
+         <div class="mySlides fade">
+            <div class="numbertext"></div>
+            
+            <img src="./static/slider/Slide-01.png" style="width:100%">
+            <div class="text"></div>
+        </div>
+    
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="./static/slider/Slide-02.png" style="width:100%">
+            <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="./static/slider/Slide-03.png" style="width:100%">
+            <div class="text"></div>
+        </div>
+    
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="./static/slider/Slide-04.jpeg" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="./static/slider/Slide-05.jpeg" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+   
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span> 
+    </div>
+    
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+    
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+    
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+    <div class="abstract">
+      
+        <h2>Free, open source, native IFC authoring platform</h2>
+    </div>
+ 
+    <div class="group">
+        
+        <div class="card-group">
+            <div class="card">
+                <h3>Audit and analyze</h3>
+                <img src="./static/cards/audit-analyse2.png" alt="Audit and analyze" width="290" height="200">
+            </div>
+            <div class="card">
+                <img src="./static/cards/authorifcmodels.png" alt="Author IFC models" width="290" height="200">
+                <h3>Author IFC Models</h3>
+            </div>
+            <div class="card">
+                <h3>Drawing generation</h3>
+                <img src="./static/cards/drawing-generation.png" alt="Drawing generation" width="290" height="200">
+            </div>
+            <div class="card">
+                <img src="./static/cards/structural-analysis2.png" alt="Structural Analysis" width="290" height="200">
+                <h3>Structural Analysis</h3>
+            </div>
+            <div class="card">
+                <h3>MEP Systems</h3>
+                <img src="./static/cards/mep-systems.png" alt="MEP Systems" width="290" height="200">
+            </div>
+            <div class="card">
+                <img src="./static/cards/cost-schedule.png" alt="Costing and Scheduling" width="290" height="200">
+                <h3>Costing and Scheduling</h3>
+            </div>
+            <div class="card">
+                <h3>Facility management</h3>
+                <img src="./static/cards/facility management.png" alt="Facility management" width="290" height="200">
+            </div>
+            <div class="card">
+                <img src="./static/cards/live-building-sensors.png" alt="Live building sensors" width="290" height="200">
+                <h3>Live building sensors</h3>
+            </div>
+        </div>
+    </div>
+  <div class="img-container">
+        <a target="_blank" href="https://osarch.org/"> 
+            <img src="./static/logos/OSArch.png" alt="" style="size: 100%;">
+        </a>
+        </div>
+        <div class="img-container">
+            <a target="_blank" href="https://awards.buildingsmart.org/gallery/eMXBbjzL/QPlgQoEw?search=2f05dd15670cbe3d-2"></a>
+            <img src="./static/awards/BSAW.png" alt="" style="size: 100%">
+        </div>
+        <div class="img-container">
+            <img src="./static/awards/Epic.png" alt="" style="size: 100%">
+        </div>
+        <div class="img-container">
+            <img src="./static/awards/GoogleSoC.png" alt="" style="size: 100%">
+        </div>  
+    </div> 
+    <!-- <div class="tempfooter">
+        <img src="./static/other/subfooter.png" alt="" style="">
+    </div> -->
+    
+    <footer>     
+        <HR>  
+        <p class="footer">Blender is Free Software made by the community of 
+            <a href="https://www.blender.org/" class="IfcOpenShell" color=green>Blender.org</a></p>
+        <p class="footer">The BlenderBIM Add-on is built with ♥ on the awesome  <a class="IfcOpenShell" href="http://www.ifcopenshell.org/">IfcOpenShell</a>
+        project by amazing volunteers. You can <a class="IfcOpenShell">be one too!</a> </p> 
+    </footer>
+</body>
+</html>
